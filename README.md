@@ -111,7 +111,7 @@ $ vagrant
 **If the license is not installed correctly, you will see an error message.**
 
 
-Open the cmd and change the directory to C:\HashiCorp\Vagrant\bin>
+Open the cmd and change the directory to C:\HashiCorp\VagrantVMwareUtility\bin>
 
 Then type the following commands:
 
