@@ -213,18 +213,24 @@ end
     config.vm.box = "ubuntu/xenial64"
 	config.vm.hostname = 'master'
 	config.vm.network :private_network, ip: "192.168.3.2"
+	config.vm.provision "shell",
+            inline: "sudo apt-get update -y && apt-get install -y wget"
   end
 # Node 1
   config.vm.define "node1" do |config|
     config.vm.box = "ubuntu/xenial64"
 	config.vm.hostname = 'node1'
 	config.vm.network :private_network, ip: "192.168.3.3"
+	config.vm.provision "shell",
+            inline: "sudo apt-get update -y && apt-get install -y wget"
   end
 # Node 2
   config.vm.define "node2" do |config|
     config.vm.box = "ubuntu/xenial64"
 	config.vm.hostname = 'node2'
 	config.vm.network :private_network, ip: "192.168.3.4"
+	config.vm.provision "shell",
+            inline: "sudo apt-get update -y && apt-get install -y wget"
   end
 end
 ```
