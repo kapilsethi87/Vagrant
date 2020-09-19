@@ -193,9 +193,29 @@ VagrantFile Options | Description
 ------------ | -------------
 config.vm.box  | Operating System
 config.vm.provider  |  virtualbox
+config.vm.hostname  |  HostName
+config.vm.define  |  
 config.vm.network  |  How your host sees you box
 config.vm.synced_folder  |  How you access files from your computer
 config.vm.provision  |  What we want setup
+
+
+**Vagrant File for setup 3 VM's**
+```
+Vagrant.configure("2") do |config|
+  config.vm.define "master" do |subconfig|
+    subconfig.vm.box = "ubuntu/xenial64"
+  end
+
+  config.vm.define "node1" do |subconfig|
+    subconfig.vm.box = "ubuntu/xenial64"
+  end
+
+  config.vm.define "node2" do |subconfig|
+    subconfig.vm.box = "ubuntu/xenial64"
+  end
+end
+```
 
 **For more information please check out the vagrant documentation here:**
 
