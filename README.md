@@ -187,14 +187,14 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
 
 
-### Vagrant File five main parts
+### Vagrant File Sever main parts
 
 VagrantFile Options | Description
 ------------ | -------------
 config.vm.box  | Operating System
 config.vm.provider  |  virtualbox
 config.vm.hostname  |  HostName
-config.vm.define  |  
+config.vm.define  |  Define the name of virtual machine
 config.vm.network  |  How your host sees you box
 config.vm.synced_folder  |  How you access files from your computer
 config.vm.provision  |  What we want setup
