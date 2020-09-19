@@ -203,16 +203,28 @@ config.vm.provision  |  What we want setup
 **Vagrant File for setup 3 VM's**
 ```
 Vagrant.configure("2") do |config|
-  config.vm.define "master" do |subconfig|
-    subconfig.vm.box = "ubuntu/xenial64"
+config.ssh.insert_key = false
+config.vm.provider :virtualbox do |config|
+  config.memory = 256
+  config.cpus = 1
+end
+# Master
+  config.vm.define "master" do |config|
+    config.vm.box = "ubuntu/xenial64"
+	config.vm.hostname = 'master'
+	config.vm.network :private_network, ip: "192.168.3.2"
   end
-
-  config.vm.define "node1" do |subconfig|
-    subconfig.vm.box = "ubuntu/xenial64"
+# Node 1
+  config.vm.define "node1" do |config|
+    config.vm.box = "ubuntu/xenial64"
+	config.vm.hostname = 'node1'
+	config.vm.network :private_network, ip: "192.168.3.3"
   end
-
-  config.vm.define "node2" do |subconfig|
-    subconfig.vm.box = "ubuntu/xenial64"
+# Node 2
+  config.vm.define "node2" do |config|
+    config.vm.box = "ubuntu/xenial64"
+	config.vm.hostname = 'node2'
+	config.vm.network :private_network, ip: "192.168.3.4"
   end
 end
 ```
