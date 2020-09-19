@@ -187,7 +187,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
 
 
-### Vagrant File Sever main parts
+### Vagrant File Seven main parts
 
 VagrantFile Options | Description
 ------------ | -------------
