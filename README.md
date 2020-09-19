@@ -200,7 +200,7 @@ config.vm.synced_folder  |  How you access files from your computer
 config.vm.provision  |  What we want setup
 
 
-**Vagrant File for setup 3 VM's**
+**For example, I creating 3 VM's with Vagrantfile as below**
 ```
 Vagrant.configure("2") do |config|
 config.ssh.insert_key = false
