@@ -216,6 +216,12 @@ Vagrant.configure("2") do |config|
   end
 end
 ```
+**This will create 3 VMs (master, node1, node2).**
+
+### To ssh into any of the VMs, just specify its name. For example, to ssh into node1, call:
+```
+vagrant ssh node1
+~
 
 **For more information please check out the vagrant documentation here:**
 
