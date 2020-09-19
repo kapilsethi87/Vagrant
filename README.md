@@ -221,7 +221,7 @@ end
 ### To ssh into any of the VMs, just specify its name. For example, to ssh into node1, call:
 ```
 vagrant ssh node1
-~
+```
 
 **For more information please check out the vagrant documentation here:**
 
